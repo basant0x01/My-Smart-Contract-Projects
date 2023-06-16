@@ -4,6 +4,6 @@ These are the projects that I created while learning smart contract development.
 1. [CrowdFundings](https://github.com/basant0x01/my-smart-contract-projects/tree/main/CrowdFundings)
 
 
-
-#### Credits
+---
+### Huge Credits
 [CodeEater](https://www.youtube.com/@CodeEater21)
