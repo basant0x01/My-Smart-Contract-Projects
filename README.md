@@ -1,2 +1,2 @@
 # my-smart-contract-projects
-These are the projects that i created while learning the smart contract developments. Here are the projects from Easy to Advances Build in Solidity.
+These are the projects that I created while learning smart contract development. And these projects are from [Easy to Advances] build in Solidity.
