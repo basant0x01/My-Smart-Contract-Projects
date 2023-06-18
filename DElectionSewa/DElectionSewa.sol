@@ -12,20 +12,20 @@ contract DElectionSewa{
  
     address chiefElectionCommissioner; // Controls Internal Voting managements
 
- struct party{
-     string partyName;
-     address partyAddress;
-     string partyRepresentative;
-     uint partySymbol;
-     uint totalVotes;
-     bool isElectionWinner;
- }
+    struct party{
+        string partyName;
+        address partyAddress;
+        string partyRepresentative;
+        uint partySymbol;
+        uint totalVotes;
+        bool isElectionWinner;
+    }
 
- struct voter{
-     address voterAddress;
-     bool alreadyVoted;
-     uint votedTo;
- }
+    struct voter{
+        address voterAddress;
+        bool alreadyVoted;
+        uint votedTo;
+    }
 
     constructor(address _chiefElectionCommissionerAddress){
         chiefElectionCommissioner = _chiefElectionCommissionerAddress;
@@ -35,7 +35,14 @@ contract DElectionSewa{
     mapping(address=>voter) public voters;
     uint public allTotalVoters;
 
- function registerParties(string memory _partyName,address _partyAddress,string memory _partyRepresentative,uint _partySymbol) public {
+
+    modifier onlychiefElectionCommissioner(){
+        chiefElectionCommissioner == msg.sender;
+        _;
+    }
+
+ function registerParties(string memory _partyName,address _partyAddress,string memory _partyRepresentative,uint _partySymbol)
+  public onlychiefElectionCommissioner {
      party storage thisParty = parties[_partySymbol];
      thisParty.partyAddress = _partyAddress;
      thisParty.partyName = _partyName;
@@ -56,7 +63,7 @@ contract DElectionSewa{
  }
 
     // You have to input most voted party for the validation.
- function showElectionWinner(uint _partySymbol) public {
+ function showElectionWinner(uint _partySymbol) public onlychiefElectionCommissioner {
      party storage thisParty = parties[_partySymbol];
      // If this party has total 10 Votes then, more than 5 voters should vote this party to select as winner. 
      require(thisParty.totalVotes > allTotalVoters/2,"Majorty of voters do not support this party");
