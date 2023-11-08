@@ -1,5 +1,5 @@
 # My Smart Contract Projects
-These are the projects that I created while learning smart contract development. And these projects are from [Easy to Advances] build in Solidity.
+These are the projects that I have created while learning smart contract developments.
 
 ## BASIC
 1. [CrowdFundings](https://github.com/basant0x01/my-smart-contract-projects/tree/main/CrowdFundings)
