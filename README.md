@@ -1,5 +1,5 @@
 # My Smart Contract Projects
-These are the projects that I have created while learning smart contract developments.
+These are the projects that I have created while learning smart contract development.
 
 ## BASIC
 1. [CrowdFundings](https://github.com/basant0x01/my-smart-contract-projects/tree/main/CrowdFundings)
